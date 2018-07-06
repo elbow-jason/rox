@@ -4,7 +4,7 @@ defmodule Rox.Mixfile do
   def project do
     [
       app: :rox,
-      version: "2.3.0",
+      version: "2.3.1",
       elixir: "~> 1.4",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
@@ -27,7 +27,7 @@ defmodule Rox.Mixfile do
   defp deps do
     [
       # Rust NIFs
-      {:rustler, git: "https://github.com/hansihe/rustler", sparse: "rustler_mix"},
+      {:rustler, "~> 0.18"},
 
       # Doc generation
       {:ex_doc, "~> 0.18", only: :dev},
